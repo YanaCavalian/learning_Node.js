@@ -4,8 +4,8 @@ let isRunning = true;
 // тоесть цикл событий заблокирован!
 
 setTimeout(() => (isRunning = false), 0);
-process.nextTick(() => console.log("next Tick"));
+process.nextTick(() => console.log('next Tick'));
 
 while (isRunning) {
-  console.log("While loop is running...");
+  console.log('While loop is running...');
 }

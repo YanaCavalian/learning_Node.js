@@ -1,30 +1,30 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const dns = require("dns");
+const dns = require('dns');
 
 function info(text) {
   console.log(text, performance.now().toFixed(2));
 }
 
-console.log("Program start");
+console.log('Program start');
 
 //Close events
-fs.writeFile("./test.txt", "Hello Node.js", () => info("File written"));
+fs.writeFile('./test.txt', 'Hello Node.js', () => info('File written'));
 
 //Promises
-Promise.resolve().then(() => info("Promise 1"));
+Promise.resolve().then(() => info('Promise 1'));
 
 //Next tick
-process.nextTick(() => info("NextTick 1"));
+process.nextTick(() => info('NextTick 1'));
 
 //setImmediate (Check)
-setImmediate(() => info("Immediate 1"));
+setImmediate(() => info('Immediate 1'));
 
 //Timeouts
-setTimeout(() => info("Timer 1"), 0);
+setTimeout(() => info('Timer 1'), 0);
 setTimeout(() => {
-  process.nextTick(() => info("Next tick 2"));
-  info("Timer 2");
+  process.nextTick(() => info('Next tick 2'));
+  info('Timer 2');
 }, 100);
 
 //Intervals
@@ -35,13 +35,13 @@ const intervalId = setInterval(() => {
 }, 50);
 
 //I/O Events
-dns.lookup("localhost", (error, address, family) => {
-  info("DNS 1 localhost", address);
-  Promise.resolve().then(() => info("Promise 2"));
-  process.nextTick(() => info("Next tick 3"));
+dns.lookup('localhost', (error, address, family) => {
+  info('DNS 1 localhost', address);
+  Promise.resolve().then(() => info('Promise 2'));
+  process.nextTick(() => info('Next tick 3'));
 });
 
-console.log("Program end");
+console.log('Program end');
 
 // Program start
 // Program end

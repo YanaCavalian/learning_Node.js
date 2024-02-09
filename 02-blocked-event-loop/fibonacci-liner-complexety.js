@@ -3,9 +3,9 @@ function info(text) {
   console.log(text, performance.now().toFixed(2));
 }
 
-info("program start");
+info('program start');
 
-setTimeout(() => info("Timeout"), 0);
+setTimeout(() => info('Timeout'), 0);
 
 function fib(n) {
   if (n === 0 || n === 1) {
@@ -24,7 +24,7 @@ function fib(n) {
 
 console.log(fib(1000));
 
-info("program end");
+info('program end');
 
 //program start 16.46
 //4.346655768693743e+208

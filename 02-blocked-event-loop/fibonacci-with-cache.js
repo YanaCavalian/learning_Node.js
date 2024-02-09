@@ -1,7 +1,7 @@
 //  0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 //  0, 1, 2, 3, 4, 5, 6, 7 ,8, 9, 10 индексы
 
-setTimeout(() => console.log("Timeout"), 0);
+setTimeout(() => console.log('Timeout'), 0);
 
 //рекурсивный метод вычисления чисел Фибоначчи
 const cache = new Map();
