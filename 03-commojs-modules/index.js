@@ -1,10 +1,5 @@
-console.log(arguments.callee.toString());
+const { myName, myHobbies, myFavoriteNumber } = require('./multiple-export');
 
-// Любой модуль Common.js помещается в node.js в виде анонимной функции с 5 параметрами
-
-// // function (exports, require, module, __filename, __dirname) {
-// console.log(arguments.callee.toString());
-
-// }
-
-console.log(exports);
+console.log(myName);
+console.log(myHobbies);
+console.log(myFavoriteNumber);
